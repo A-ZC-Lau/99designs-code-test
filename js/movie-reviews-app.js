@@ -31,6 +31,7 @@ const MovieReviewsApp = function(reviews, movies) {
     {
       // get stars for appending
       let stars = createStars(payload.score)
+      
       if (stars.length)
       {
         // extra 1 for space
@@ -45,7 +46,6 @@ const MovieReviewsApp = function(reviews, movies) {
 
     tweets.push(tweet)
   }
-  console.log(tweets)
 
   return {
     getTweets: function() {
