@@ -59,3 +59,44 @@ describe(
         }
     }
 )
+
+describe(
+    "createTweet",
+    function ()
+    {
+        let 
+            title = "Movie Title",
+            year = "2000",
+            review = "It was great",
+            score = "70"
+        it(
+            "should return correct tweet format (with year)",
+            function ()
+            {
+                let payload = {
+                    title,
+                    year,
+                    review,
+                    score
+                }              
+                
+                let tweet = createTweet(payload)
+                expect(tweet).toEqual(`${title} (${year}): ${review} ★★★½`)
+            }
+        )
+        it(
+            "should return correct tweet format (without year)",
+            function ()
+            {            
+                let payload = {
+                    title,
+                    review,
+                    score
+                }              
+                
+                let tweet = createTweet(payload)
+                expect(tweet).toEqual(`${title}: ${review} ★★★½`)
+            }
+        )
+    }
+)
