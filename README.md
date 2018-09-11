@@ -49,6 +49,12 @@ In your project directory, run:
 ```
 tar -cvzf --exclude node_modules your_name.tar.gz .
 ```
+
+or
+
+```
+tar --exclude node_modules -zcvf your_name.tar.tgz .
+```
 (replacing *your_name* with your actual name, of course)
 
 Then email the created tar.gz file back to the person who sent you the test
