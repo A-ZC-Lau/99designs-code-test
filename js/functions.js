@@ -10,7 +10,10 @@ createTweet = function ({
   })
 {
     let stars = createStars(score)
-    return `${title} ${year}: ${review} ${stars}`
+    year = year 
+        ? ` (${year})`
+        : ""
+    return `${title}${year}: ${review} ${stars}`
 }
 module.exports.createTweet = createTweet
 
